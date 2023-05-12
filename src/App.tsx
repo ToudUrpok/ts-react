@@ -5,6 +5,7 @@ import { Todo, User } from './types/types';
 import ItemsList from './components/ItemsList';
 import UserItem from './components/UserItem';
 import TodoItem from './components/TodoItem';
+import EventsExample from './components/EventsExample';
 
 function App() {
   const [users, setUsers] = useState<User[]>([])
@@ -37,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-        <Card 
+        {/* <Card 
           height='200px' 
           width='200px' 
           type={CardType.primary}
@@ -46,11 +47,12 @@ function App() {
           <button onClick={e => e.stopPropagation()}>
             Test Button
           </button>
-        </Card>
+        </Card> */}
         {/* <ItemsList
           items={users}
           renderItem={(user) => <UserItem key={user.id} user={user} /> }
         /> */}
+        <EventsExample/>
         <ItemsList
           items={todos}
           renderItem={(todo) => <TodoItem key={todo.id} todo={todo} /> }
